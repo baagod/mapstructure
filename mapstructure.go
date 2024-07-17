@@ -1034,7 +1034,7 @@ func (d *Decoder) decodeMapFromStruct(name string, dataVal reflect.Value, val re
 			reflect.Indirect(addrVal).Set(vMap)
 
 			// ---------- Start
-			// 允许将 hook 的定义值输入 map
+			// Allows custom values of hooks to be entered into a map
 			input, err := d.parseInput(name, x.Interface(), reflect.Indirect(addrVal))
 			if err != nil {
 				return err
